@@ -1,0 +1,190 @@
+/* ========== PALETA DE CORES ========== */
+:root {
+  --cor-primaria: #e26f79;
+  --cor-secundaria: #f1faee;
+  --cor-destaque: #c91717;
+  --cor-texto: #000000;
+  --cor-contraste: #ffffff;
+  --cor-sucesso: #e26f79;
+
+/* ========== CONFIGURAÇÃO GERAL ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 5rem 2rem;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  background: var(--cor-primaria);
+  color: var(--cor-contraste);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo span {
+  color: var(--cor-contraste);
+  font-family: 'Mr Dafoe', cursive;
+}
+
+.nav-link {
+  color: var(--cor-contraste);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: var(--cor-destaque);
+}
+
+/* ========== HERO ========== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1431263154979-0982327fccbb?auto=format&fit=crop&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+}
+.hero-title {
+  color: var(--cor-contraste);
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+.hero-sub {
+  color: var(--cor-contraste);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ========== BOTÕES ========== */
+.btn-primary {
+  background-color: var(--cor-sucesso);
+  color: var(--cor-texto);
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--cor-destaque);
+  color: white;
+}
+.btn-secondary {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #b8323a;
+}
+
+/* ========== TÍTULOS E TEXTO ========== */
+.section-title {
+  color: var(--cor-primaria);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.section-text {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* ========== PRODUTOS ========== */
+.product-section {
+  background-color: #fdfdfd;
+  text-align: center;
+}
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ========== FORMULÁRIO ========== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--cor-primaria);
+  outline: none;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: var(--cor-texto);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ========== ANIMAÇÕES ========== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-fade-in.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in.delay-400 { animation-delay: 0.4s; }
+
+/* ========== FONTE PERSONALIZADA ========== */
+@font-face {
+  font-family: 'Mr Dafoe';
+  src: url('./fonts/MrDafoe-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.font-mr-dafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+
+}

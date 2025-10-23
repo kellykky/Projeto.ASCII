@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>whattheflower</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container mx-auto flex justify-between items-center p-6">
+      <h1 class="logo text-2xl font-bold tracking-wide">
+        <span class="font-mr-dafoe text-4xl">whattheflower</span>
+      </h1>
+      <nav class="space-x-6">
+        <a href="#sobre" class="nav-link"><span class="font-mr-dafoe text-2xl">sobre</span></a>
+        <a href="#produtos" class="nav-link"><span class="font-mr-dafoe text-2xl">produtos</span></a>
+        <a href="#contato" class="nav-link"><span class="font-mr-dafoe text-2xl">contato</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="overlay">
+      <h2 class="hero-title animate-fade-in">Flores que Encantam</h2>
+      <p class="hero-sub animate-fade-in delay-200">Transforme qualquer momento em beleza e emoção</p>
+      <a href="#produtos" class="btn-primary animate-fade-in delay-400">Ver Produtos</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="container mx-auto py-16 px-4 md:px-0">
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="https://media.istockphoto.com/id/1369205676/photo/close-up-a-bouquet-of-pink-tulips-in-female-hands.jpg?s=612x612&w=0&k=20&c=7z6hEEqMOXU6s-coPuxvrese1XkbaTvvuCv4KsjHS-g=" alt="Flores" class="w-full md:w-1/2 rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 animate-fade-in">
+      <div class="md:w-1/2 animate-fade-in delay-200">
+        <h3 class="section-title">Quem Somos</h3>
+        <p class="section-text">Acreditamos que flores têm o poder de transmitir emoções e criar memórias inesquecíveis. Trabalhamos com arranjos personalizados, flores frescas e atendimento dedicado para cada cliente.</p>
+        <p class="section-text">Nossa missão é levar beleza, alegria e frescor para todos os momentos especiais da sua vida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="product-section" 
+    x-data="{ current: 0, products: [
+      { img:'https://emporiodifiori.com.br/wp-content/uploads/2024/02/BUQUE_24_ROSAS_V5-copiar-2.webp', name:'Rosas', desc:'Clássicas e elegantes, perfeitas para qualquer ocasião.'},
+      { img:'https://media.istockphoto.com/id/1369205676/photo/close-up-a-bouquet-of-pink-tulips-in-female-hands.jpg?s=612x612&w=0&k=20&c=7z6hEEqMOXU6s-coPuxvrese1XkbaTvvuCv4KsjHS-g=', name:'Tulipas', desc:'Coloridas e delicadas, ideais para transmitir alegria.'},
+      { img:'https://arquiteturadasflores.com.br/wp-content/uploads/2025/02/IMG_8099.jpg', name:'Lírios', desc:'Elegantes e sofisticados, para momentos especiais.'}
+    ]}">
+    
+    <h3 class="section-title text-center animate-fade-in">Nossos Produtos</h3>
+    
+    <div class="relative max-w-4xl mx-auto">
+      <template x-for="(product, index) in products" :key="index">
+        <div x-show="current === index" class="product-card animate-fade-in">
+          <img :src="product.img" :alt="product.name" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-pink-700 mb-2" x-text="product.name"></h4>
+            <p class="text-gray-600" x-text="product.desc"></p>
+          </div>
+        </div>
+      </template>
+
+      <div class="flex justify-between mt-6">
+        <button @click="current = current === 0 ? products.length - 1 : current - 1" class="btn-secondary">Anterior</button>
+        <button @click="current = current === products.length - 1 ? 0 : current + 1" class="btn-secondary">Próximo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contact-section">
+    <h3 class="section-title text-center animate-fade-in">Fale Conosco</h3>
+    <form class="contact-form animate-fade-in delay-200">
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Seu nome">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="seu@email.com">
+      </div>
+      <div>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 whattheflower</p>
+  </footer>
+</body>
+</html>
