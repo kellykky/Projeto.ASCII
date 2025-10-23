@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/BebasNeue-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./fonts/JosefinSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ========== PALETA DE CORES ========== */
 :root {
   --cor-primaria: #e26f79;
@@ -6,10 +22,11 @@
   --cor-texto: #000000;
   --cor-contraste: #ffffff;
   --cor-sucesso: #e26f79;
+}
 
 /* ========== CONFIGURAÇÃO GERAL ========== */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   background-color: var(--cor-secundaria);
   color: var(--cor-texto);
   line-height: 1.6;
@@ -31,7 +48,7 @@ section {
 
 .logo span {
   color: var(--cor-contraste);
-  font-family: 'Mr Dafoe', cursive;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .nav-link {
@@ -39,6 +56,7 @@ section {
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .nav-link:hover {
   color: var(--cor-destaque);
@@ -109,6 +127,9 @@ section {
   color: #333;
   margin-bottom: 1rem;
 }
+.font-josefin-sans {
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 /* ========== PRODUTOS ========== */
 .product-section {
@@ -174,17 +195,3 @@ section {
 }
 .animate-fade-in.delay-200 { animation-delay: 0.2s; }
 .animate-fade-in.delay-400 { animation-delay: 0.4s; }
-
-/* ========== FONTE PERSONALIZADA ========== */
-@font-face {
-  font-family: 'Mr Dafoe';
-  src: url('./fonts/MrDafoe-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-.font-mr-dafoe {
-  font-family: 'Mr Dafoe', cursive;
-}
-
-}
