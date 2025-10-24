@@ -38,7 +38,7 @@ Footer: Informações de direitos autorais
 
 Clone o repositório:
 
-git clone https://github.com/seuusuario/WhatTheFlower.git
+git clone https://github.com/kellykky/WhatTheFlower.git
 
 Acesse a pasta do projeto:
 
