@@ -93,7 +93,7 @@ section {
 /* ========== BOTÕES ========== */
 .btn-primary {
   background-color: var(--cor-primaria);
-  color: var(--cor-texto);
+  color: var(--cor-secundaria);
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
   font-weight: 600;
