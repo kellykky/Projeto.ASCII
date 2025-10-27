@@ -17,17 +17,26 @@
 <body class="font-josefin-sans bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="site-header font-bebas-neue text-2xl">
-    <div class="container mx-auto flex justify-between items-center p-6">
-      <h1 class="logo text-2xl font-bold tracking-wide">
-        <span class="font-bebas-neue text-4xl">WhatTheFlower</span>
-      </h1>
-      <nav class="space-x-6">
-        <a href="#sobre" class="nav-link font-bebas-neue text-3xl">Sobre</a>
-        <a href="#produtos" class="nav-link font-bebas-neue text-3xl">Produtos</a>
-        <a href="#contato" class="nav-link font-bebas-neue text-3xl">Contato</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="logo">
+        <span class="text-2xl">WhatThe<span class="text-destaque">Flower</span></span>
+      </a>
+
+      <!-- Botão do Menu Hamburguer (visível apenas em mobile) -->
+      <button class="menu-toggle md:hidden" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Menu de navegação -->
+      <div class="nav-menu hidden md:flex md:items-center">
+        <a href="#sobre" class="nav-link mx-4">Sobre</a>
+        <a href="#produtos" class="nav-link mx-4">Produtos</a>
+        <a href="#contato" class="nav-link mx-4">Contato</a>
+      </div>
+    </nav>
   </header>
 
   <!-- Hero -->
