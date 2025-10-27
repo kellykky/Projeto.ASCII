@@ -16,9 +16,9 @@ A interatividade é garantida pelo Alpine.js, enquanto o Tailwind CSS cuida da e
 
 HTML5 — Estrutura das páginas
 
-Tailwind CSS — Estilização moderna e responsiva
+CSS — Estilos próprios e utilitários (Tailwind em parte)
 
-Alpine.js — Interatividade leve e reativa
+JavaScript — Interatividade (Alpine.js + scripts próprios)
 
 @font-face — Fontes personalizadas (Bebas Neue, Josefin Sans)
 
@@ -35,6 +35,10 @@ Produtos: Galeria interativa com imagens e descrições
 Contato: Formulário com nome, e-mail e mensagem
 
 Footer: Informações de direitos autorais
+
+MOBILE
+
+Menu Hambúrguer: Menu responsivo que aparece em telas pequenas com botão de toggle
 
 🚀 Como Executar
 
